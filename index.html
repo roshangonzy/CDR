@@ -1,0 +1,1721 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f2eb">
+  <meta name="description" content="Digital Creation Residency — a shared living, learning and creative experience in beautiful, carefully selected destinations. Live together. Learn together. Create something of your own.">
+  <title>Digital Creation Residency | Live. Learn. Create.</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --cream: #f5f2eb;
+      --paper: #fffefa;
+      --ink: #242c25;
+      --muted: #70766c;
+      --green: #354b3b;
+      --green-light: #e4e9df;
+      --orange: #c87950;
+      --line: rgba(36,44,37,.13);
+      --serif: "Playfair Display", Georgia, serif;
+      --sans: "DM Sans", sans-serif;
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: var(--sans);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 48px));
+      margin: auto;
+    }
+
+    .eyebrow {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      font-weight: 700;
+      color: var(--orange);
+    }
+
+    h1, h2, h3 {
+      font-weight: 500;
+    }
+
+    h1, h2, .serif {
+      font-family: var(--serif);
+    }
+
+    h2 {
+      font-size: clamp(36px, 5vw, 57px);
+      line-height: 1.13;
+      letter-spacing: -1.5px;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      max-width: 620px;
+      font-size: 16px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 23px;
+      border-radius: 3px;
+      background: var(--green);
+      color: white;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: .25s ease;
+    }
+
+    .btn:hover {
+      background: var(--orange);
+      transform: translateY(-2px);
+    }
+
+    /* Navigation */
+
+    nav {
+      height: 78px;
+      display: flex;
+      align-items: center;
+      background: rgba(245,242,235,.94);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      font-family: var(--serif);
+      font-size: 19px;
+      line-height: 1.1;
+    }
+
+    .brand span {
+      display: block;
+      font-family: var(--sans);
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 5px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .nav-links a:hover {
+      color: var(--orange);
+    }
+
+    .nav-cta {
+      color: var(--green) !important;
+      font-weight: 700;
+    }
+
+    /* Hero */
+
+    .hero {
+      min-height: 690px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      color: white;
+      overflow: hidden;
+      background:
+        linear-gradient(90deg, rgba(17,30,23,.76), rgba(17,30,23,.18)),
+        url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2200&q=90") center 55% / cover;
+    }
+
+    .hero-content {
+      padding-top: 35px;
+      padding-bottom: 60px;
+      max-width: 760px;
+    }
+
+    .hero .eyebrow {
+      color: #e6b18c;
+    }
+
+    .hero h1 {
+      font-size: clamp(54px, 8.5vw, 100px);
+      line-height: .99;
+      letter-spacing: -3px;
+      margin: 25px 0;
+    }
+
+    .hero h1 em {
+      color: #e8b58f;
+      font-weight: 500;
+    }
+
+    .hero-copy {
+      font-size: 17px;
+      color: rgba(255,255,255,.88);
+      max-width: 540px;
+      margin-bottom: 32px;
+    }
+
+    .hero-bottom {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .hero .btn {
+      background: #f5f2eb;
+      color: var(--green);
+    }
+
+    .hero-note {
+      font-size: 12px;
+      color: rgba(255,255,255,.8);
+    }
+
+    /* Intro */
+
+    .intro {
+      padding: 115px 0 120px;
+      text-align: center;
+    }
+
+    .intro h2 {
+      max-width: 850px;
+      margin: 20px auto 25px;
+    }
+
+    .intro h2 em {
+      color: var(--orange);
+    }
+
+    .intro .section-intro {
+      margin: auto;
+    }
+
+    .intro-signature {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 20px;
+      margin-top: 35px;
+      color: var(--green);
+    }
+
+    /* Pillars */
+
+    .pillars {
+      background: var(--paper);
+      padding: 105px 0 115px;
+    }
+
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 40px;
+      margin-bottom: 55px;
+    }
+
+    .section-heading h2 {
+      margin-top: 15px;
+    }
+
+    .pillar-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .pillar-card {
+      min-width: 0;
+    }
+
+    .pillar-image {
+      height: 290px;
+      overflow: hidden;
+      margin-bottom: 25px;
+    }
+
+    .pillar-image img {
+      height: 100%;
+      transition: transform .7s ease;
+    }
+
+    .pillar-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .pillar-number {
+      color: var(--orange);
+      font-size: 11px;
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+
+    .pillar-card h3 {
+      font-family: var(--serif);
+      font-size: 31px;
+      margin: 8px 0 12px;
+    }
+
+    .pillar-card p {
+      color: var(--muted);
+      font-size: 14px;
+      max-width: 340px;
+    }
+
+    /* Lifestyle */
+
+    .lifestyle {
+      padding: 120px 0;
+    }
+
+    .lifestyle-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 90px;
+      align-items: center;
+    }
+
+    .lifestyle-photo {
+      height: 560px;
+      position: relative;
+    }
+
+    .lifestyle-photo img {
+      height: 100%;
+    }
+
+    .photo-caption {
+      position: absolute;
+      bottom: 22px;
+      left: 22px;
+      background: var(--paper);
+      padding: 13px 18px;
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 16px;
+    }
+
+    .lifestyle-copy h2 {
+      margin: 18px 0 25px;
+    }
+
+    .lifestyle-copy p {
+      color: var(--muted);
+      margin-bottom: 17px;
+      font-size: 15px;
+    }
+
+    .lifestyle-list {
+      list-style: none;
+      margin-top: 28px;
+    }
+
+    .lifestyle-list li {
+      padding: 12px 0;
+      border-bottom: 1px solid var(--line);
+      font-size: 13px;
+    }
+
+    .lifestyle-list li::before {
+      content: "✳";
+      color: var(--orange);
+      margin-right: 12px;
+    }
+
+    /* Destination */
+
+    .destination {
+      background: #eae9df;
+      padding: 105px 0;
+    }
+
+    .destination-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 75px;
+      align-items: center;
+    }
+
+    .destination-copy h2 {
+      margin: 18px 0 24px;
+    }
+
+    .destination-copy p {
+      color: var(--muted);
+      font-size: 15px;
+      margin-bottom: 17px;
+    }
+
+    .destination-image {
+      height: 450px;
+      overflow: hidden;
+    }
+
+    .destination-image img {
+      height: 100%;
+    }
+
+    .destination-principles {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .destination-principle {
+      padding: 15px;
+      background: rgba(255,255,255,.55);
+      font-size: 12px;
+    }
+
+    .destination-principle strong {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 4px;
+      color: var(--green);
+    }
+
+    /* Learning */
+
+    .learning {
+      background: var(--green);
+      color: white;
+      padding: 115px 0;
+    }
+
+    .learning-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 85px;
+      align-items: center;
+    }
+
+    .learning h2 {
+      margin: 18px 0 25px;
+    }
+
+    .learning .eyebrow {
+      color: #e6b18c;
+    }
+
+    .learning-copy {
+      color: rgba(255,255,255,.75);
+      font-size: 15px;
+      margin-bottom: 30px;
+    }
+
+    .learning-image {
+      height: 480px;
+    }
+
+    .learning-image img {
+      height: 100%;
+    }
+
+    .topic-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .topic {
+      border: 1px solid rgba(255,255,255,.3);
+      padding: 9px 14px;
+      font-size: 12px;
+      color: rgba(255,255,255,.9);
+    }
+
+    /* Creation */
+
+    .creation {
+      padding: 120px 0;
+    }
+
+    .creation-top {
+      text-align: center;
+      margin-bottom: 55px;
+    }
+
+    .creation-top h2 {
+      margin: 16px 0 20px;
+    }
+
+    .creation-top .section-intro {
+      margin: auto;
+    }
+
+    .creation-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .creation-card {
+      background: var(--paper);
+      padding: 42px;
+      min-height: 260px;
+    }
+
+    .creation-card .symbol {
+      color: var(--orange);
+      font-size: 26px;
+      margin-bottom: 25px;
+    }
+
+    .creation-card h3 {
+      font-family: var(--serif);
+      font-size: 26px;
+      margin-bottom: 12px;
+    }
+
+    .creation-card p {
+      font-size: 14px;
+      color: var(--muted);
+      max-width: 440px;
+    }
+
+    /* Day in the life */
+
+    .day {
+      padding: 110px 0;
+      background: #eae9df;
+    }
+
+    .day-layout {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 90px;
+    }
+
+    .day-heading h2 {
+      margin: 17px 0 20px;
+    }
+
+    .day-heading p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .schedule {
+      border-top: 1px solid rgba(36,44,37,.2);
+    }
+
+    .schedule-row {
+      display: grid;
+      grid-template-columns: 105px 1fr;
+      gap: 20px;
+      padding: 21px 0;
+      border-bottom: 1px solid rgba(36,44,37,.2);
+    }
+
+    .schedule-time {
+      font-size: 11px;
+      color: var(--orange);
+      letter-spacing: 1px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .schedule-row h3 {
+      font-family: var(--serif);
+      font-size: 21px;
+      margin-bottom: 4px;
+    }
+
+    .schedule-row p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* How it works */
+
+    .how {
+      padding: 115px 0;
+      background: var(--paper);
+    }
+
+    .how-heading {
+      max-width: 700px;
+      margin-bottom: 55px;
+    }
+
+    .how-heading h2 {
+      margin: 15px 0 20px;
+    }
+
+    .how-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+    }
+
+    .how-item {
+      border-top: 2px solid var(--green);
+      padding-top: 22px;
+    }
+
+    .how-item span {
+      font-size: 11px;
+      color: var(--orange);
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+
+    .how-item h3 {
+      font-family: var(--serif);
+      font-size: 22px;
+      margin: 12px 0;
+    }
+
+    .how-item p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* People */
+
+    .people {
+      padding: 115px 0;
+      background: var(--cream);
+    }
+
+    .people-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .people-photo {
+      height: 490px;
+    }
+
+    .people-photo img {
+      height: 100%;
+    }
+
+    .people-copy h2 {
+      margin: 17px 0 24px;
+    }
+
+    .people-copy p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .people-qualities {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 27px;
+    }
+
+    .quality {
+      background: var(--green-light);
+      padding: 9px 13px;
+      font-size: 11px;
+      color: var(--green);
+    }
+
+    /* First chapter */
+
+    .chapter {
+      position: relative;
+      padding: 125px 0;
+      color: white;
+      text-align: center;
+      background:
+        linear-gradient(rgba(25,39,29,.77), rgba(25,39,29,.77)),
+        url("https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&w=2000&q=85") center / cover;
+    }
+
+    .chapter .eyebrow {
+      color: #e6b18c;
+    }
+
+    .chapter h2 {
+      max-width: 800px;
+      margin: 20px auto;
+    }
+
+    .chapter p {
+      max-width: 620px;
+      margin: 0 auto 30px;
+      color: rgba(255,255,255,.8);
+      font-size: 15px;
+    }
+
+    .chapter .btn {
+      background: var(--cream);
+      color: var(--green);
+    }
+
+    .chapter-note {
+      display: block;
+      margin-top: 18px;
+      font-size: 11px;
+      color: rgba(255,255,255,.7);
+    }
+
+    /* FAQ */
+
+    .faq {
+      padding: 110px 0;
+      background: var(--paper);
+    }
+
+    .faq-layout {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 90px;
+    }
+
+    .faq-heading h2 {
+      margin: 16px 0;
+    }
+
+    .faq-heading p {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    details {
+      border-bottom: 1px solid var(--line);
+      padding: 20px 0;
+    }
+
+    summary {
+      cursor: pointer;
+      list-style: none;
+      font-family: var(--serif);
+      font-size: 19px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "+";
+      font-family: var(--sans);
+      color: var(--orange);
+      font-size: 22px;
+    }
+
+    details[open] summary::after {
+      content: "−";
+    }
+
+    details p {
+      padding-top: 14px;
+      font-size: 13px;
+      color: var(--muted);
+      max-width: 650px;
+    }
+
+    /* Footer */
+
+    footer {
+      background: #202a23;
+      color: white;
+      padding: 55px 0 30px;
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+      padding-bottom: 45px;
+    }
+
+    .footer-brand {
+      font-family: var(--serif);
+      font-size: 25px;
+    }
+
+    .footer-brand span {
+      display: block;
+      color: rgba(255,255,255,.55);
+      font-family: var(--sans);
+      font-size: 10px;
+      letter-spacing: 2px;
+      margin-top: 6px;
+      text-transform: uppercase;
+    }
+
+    .footer-line {
+      color: rgba(255,255,255,.65);
+      font-size: 13px;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.15);
+      padding-top: 22px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      color: rgba(255,255,255,.5);
+      font-size: 10px;
+    }
+
+    /* Animations */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Responsive */
+
+    @media (max-width: 850px) {
+      .nav-links {
+        gap: 15px;
+      }
+
+      .nav-links a:not(.nav-cta) {
+        display: none;
+      }
+
+      .section-heading {
+        display: block;
+      }
+
+      .section-heading .section-intro {
+        margin-top: 20px;
+      }
+
+      .pillar-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .lifestyle-grid,
+      .learning-grid,
+      .day-layout,
+      .people-grid,
+      .faq-layout,
+      .destination-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .learning-grid .learning-image {
+        order: -1;
+      }
+
+      .how-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .lifestyle-photo,
+      .people-photo {
+        height: 420px;
+      }
+
+      .faq-layout {
+        gap: 20px;
+      }
+
+      .destination-image {
+        height: 380px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .container {
+        width: min(100% - 36px, var(--max));
+      }
+
+      nav {
+        height: 68px;
+      }
+
+      .brand {
+        font-size: 17px;
+      }
+
+      .hero {
+        min-height: 650px;
+        background-position: 58% center;
+      }
+
+      .hero h1 {
+        font-size: 57px;
+        letter-spacing: -2px;
+      }
+
+      .hero-copy {
+        font-size: 15px;
+      }
+
+      h2 {
+        font-size: 39px;
+      }
+
+      .intro,
+      .pillars,
+      .lifestyle,
+      .learning,
+      .creation,
+      .day,
+      .how,
+      .people,
+      .faq,
+      .destination {
+        padding: 80px 0;
+      }
+
+      .pillar-grid,
+      .creation-grid,
+      .how-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .pillar-image {
+        height: 270px;
+      }
+
+      .creation-card {
+        padding: 30px;
+        min-height: auto;
+      }
+
+      .learning-image {
+        height: 320px;
+      }
+
+      .lifestyle-photo,
+      .people-photo {
+        height: 340px;
+      }
+
+      .schedule-row {
+        grid-template-columns: 80px 1fr;
+        gap: 12px;
+      }
+
+      .chapter {
+        padding: 90px 0;
+      }
+
+      .destination-principles {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-top,
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="container nav-inner">
+      <a class="brand" href="#home">
+        Digital Creation Residency
+        <span>Live · Learn · Create</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#idea">The idea</a>
+        <a href="#experience">Experience</a>
+        <a href="#learning">Learning</a>
+        <a href="#how">How it works</a>
+        <a href="#faq">FAQ</a>
+        <a href="#chapter" class="nav-cta">Explore the idea ↗</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="home">
+    <div class="container">
+      <div class="hero-content">
+        <div class="eyebrow">An idea taking shape · Somewhere beautiful</div>
+
+        <h1>Live.<br>Learn.<br><em>Create.</em></h1>
+
+        <p class="hero-copy">
+          Imagine sharing a beautiful home with curious people from around
+          the world. Learning new things, exploring ideas, building digital
+          creations and making the most of life along the way.
+        </p>
+
+        <div class="hero-bottom">
+          <a href="#idea" class="btn">Discover the idea ↓</a>
+          <span class="hero-note">A shared living & learning experience</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="intro" id="idea">
+      <div class="container reveal">
+        <div class="eyebrow">A different way to spend time together</div>
+
+        <h2>What if the place you live became the place where you <em>grow?</em></h2>
+
+        <p class="section-intro">
+          The Digital Creation Residency is an idea for bringing together
+          a small group of internationally minded people to live, learn
+          and create in a beautiful destination.
+          A home away from home, a space for exchanging knowledge,
+          and an opportunity to explore what we're capable of creating.
+        </p>
+
+        <div class="intro-signature">
+          Good people. New perspectives. Ideas worth exploring.
+        </div>
+      </div>
+    </section>
+
+    <section class="pillars" id="experience">
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <div>
+            <div class="eyebrow">The heart of the experience</div>
+            <h2>Three things.<br>One shared experience.</h2>
+          </div>
+
+          <p class="section-intro">
+            This isn't just a place to work, a course to attend or a holiday
+            to take. The idea is to bring all three together, without
+            sacrificing any of them.
+          </p>
+        </div>
+
+        <div class="pillar-grid">
+
+          <article class="pillar-card reveal">
+            <div class="pillar-image">
+              <img
+                src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=85"
+                alt="Beautiful, relaxed villa interior"
+                loading="lazy">
+            </div>
+
+            <div class="pillar-number">01 / LIFESTYLE</div>
+            <h3>Live well.</h3>
+            <p>
+              Share a beautiful home, meals, conversations, adventures
+              and everyday moments. Enjoy a destination and the people
+              who make it special.
+            </p>
+          </article>
+
+          <article class="pillar-card reveal">
+            <div class="pillar-image">
+              <img
+                src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=85"
+                alt="People sharing ideas and learning together"
+                loading="lazy">
+            </div>
+
+            <div class="pillar-number">02 / LEARNING</div>
+            <h3>Learn together.</h3>
+            <p>
+              Exchange skills, explore emerging technologies, attend
+              practical workshops and learn from the different experiences
+              everyone brings to the table.
+            </p>
+          </article>
+
+          <article class="pillar-card reveal">
+            <div class="pillar-image">
+              <img
+                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=85"
+                alt="Creative digital workspace with laptop"
+                loading="lazy">
+            </div>
+
+            <div class="pillar-number">03 / CREATION</div>
+            <h3>Create something.</h3>
+            <p>
+              Turn ideas into digital products. Experiment, build,
+              collaborate and make progress on something you can
+              continue developing long after the residency.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="lifestyle">
+      <div class="container lifestyle-grid">
+
+        <div class="lifestyle-photo reveal">
+          <img
+            src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1100&q=85"
+            alt="Warm and inviting shared living space"
+            loading="lazy">
+
+          <div class="photo-caption">A place that feels like home.</div>
+        </div>
+
+        <div class="lifestyle-copy reveal">
+          <div class="eyebrow">01 / The lifestyle</div>
+
+          <h2>More than a place to stay.</h2>
+
+          <p>
+            Picture a beautiful villa in a destination that offers
+            an excellent quality of life without an excessive price tag.
+            A shared kitchen, comfortable bedrooms, a pool, good internet
+            and spaces where people can work, relax or simply spend
+            time together.
+          </p>
+
+          <p>
+            Some days might mean exploring the local area. Others might
+            mean a long breakfast, a productive morning and an evening
+            sharing stories over dinner.
+          </p>
+
+          <p>
+            The idea is to create a welcoming home where people feel
+            comfortable being themselves. There is room for connection
+            without the pressure to be together all the time.
+          </p>
+
+          <ul class="lifestyle-list">
+            <li>A comfortable, beautiful shared home</li>
+            <li>Shared meals and everyday experiences</li>
+            <li>Time to explore and enjoy the destination</li>
+            <li>Space for privacy, rest and personal routines</li>
+            <li>A friendly international community</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="destination" id="destination">
+      <div class="container destination-grid">
+
+        <div class="destination-copy reveal">
+          <div class="eyebrow">The destination</div>
+
+          <h2>Premium living. Sensible spending.</h2>
+
+          <p>
+            Why limit ourselves to one country? The idea is to find
+            destinations where our money goes further without
+            compromising on the quality of the experience.
+          </p>
+
+          <p>
+            Think beautiful villas, comfortable shared spaces,
+            good food, reliable internet and interesting places
+            to explore — all at a cost that makes sense for everyone.
+          </p>
+
+          <p>
+            The destination hasn't been decided yet. We'll explore
+            different possibilities and choose a place that offers
+            the right balance of affordability, comfort, lifestyle
+            and accessibility.
+          </p>
+
+          <div class="destination-principles">
+            <div class="destination-principle">
+              <strong>01 / Value</strong>
+              Affordable overall cost of living.
+            </div>
+
+            <div class="destination-principle">
+              <strong>02 / Comfort</strong>
+              Quality accommodation and amenities.
+            </div>
+
+            <div class="destination-principle">
+              <strong>03 / Connectivity</strong>
+              Reliable internet and practical access.
+            </div>
+
+            <div class="destination-principle">
+              <strong>04 / Lifestyle</strong>
+              Great food, nature and things to explore.
+            </div>
+
+            <div class="destination-principle">
+              <strong>05 / Accessibility</strong>
+              Convenient travel and suitable entry requirements.
+            </div>
+
+            <div class="destination-principle">
+              <strong>06 / Safety</strong>
+              A comfortable environment for everyone.
+            </div>
+          </div>
+        </div>
+
+        <div class="destination-image reveal">
+          <img
+            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1100&q=85"
+            alt="Beautiful contemporary villa surrounded by greenery"
+            loading="lazy">
+        </div>
+
+      </div>
+    </section>
+
+    <section class="learning" id="learning">
+      <div class="container learning-grid">
+
+        <div class="learning-copy reveal">
+          <div class="eyebrow">02 / The learning</div>
+
+          <h2>Everyone knows something. Everyone has something to learn.</h2>
+
+          <p class="learning-copy">
+            Learning doesn't have to happen in a traditional classroom.
+            We can learn from each other, run practical sessions,
+            experiment with new tools and explore ideas together.
+          </p>
+
+          <p class="learning-copy">
+            Some sessions may be led by the residency founder.
+            Others may be shared by participants who have skills or
+            experiences they want to pass on.
+          </p>
+
+          <div class="topic-list">
+            <span class="topic">Artificial Intelligence</span>
+            <span class="topic">Digital Marketing</span>
+            <span class="topic">Automation</span>
+            <span class="topic">No-code Tools</span>
+            <span class="topic">Design & Creativity</span>
+            <span class="topic">Digital Products</span>
+            <span class="topic">Online Business Skills</span>
+            <span class="topic">Experimentation</span>
+          </div>
+        </div>
+
+        <div class="learning-image reveal">
+          <img
+            src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=1100&q=85"
+            alt="Friends sharing a meal and conversation"
+            loading="lazy">
+        </div>
+
+      </div>
+    </section>
+
+    <section class="creation">
+      <div class="container">
+
+        <div class="creation-top reveal">
+          <div class="eyebrow">03 / The creation</div>
+
+          <h2>Ideas deserve to become something real.</h2>
+
+          <p class="section-intro">
+            The creative side is about exploring possibilities and
+            turning ideas into useful digital things. Not necessarily
+            building the next big company. Just making something
+            meaningful that belongs to you.
+          </p>
+        </div>
+
+        <div class="creation-grid">
+
+          <article class="creation-card reveal">
+            <div class="symbol">✳</div>
+            <h3>Your own ideas, your own projects.</h3>
+            <p>
+              Develop a digital product, build a useful tool, create
+              a resource, experiment with an AI-powered idea or work
+              towards a project you've been putting off.
+            </p>
+          </article>
+
+          <article class="creation-card reveal">
+            <div class="symbol">↗</div>
+            <h3>Collaboration without pressure.</h3>
+            <p>
+              Exchange feedback, share expertise and collaborate when
+              interests align. Some projects may be individual;
+              others may be shared by people who choose to work together.
+            </p>
+          </article>
+
+          <article class="creation-card reveal">
+            <div class="symbol">◎</div>
+            <h3>Experiment and discover.</h3>
+            <p>
+              Try new tools, test ideas, solve problems and learn
+              by doing. You don't need to arrive with a fully formed
+              idea or an impressive technical background.
+            </p>
+          </article>
+
+          <article class="creation-card reveal">
+            <div class="symbol">⌁</div>
+            <h3>Keep building after you leave.</h3>
+            <p>
+              The goal is to leave with new skills, useful connections
+              and something tangible you can continue developing
+              independently, wherever life takes you.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="day">
+      <div class="container day-layout">
+
+        <div class="day-heading reveal">
+          <div class="eyebrow">A glimpse into the rhythm</div>
+
+          <h2>Structure when we need it. Freedom when we don't.</h2>
+
+          <p>
+            The proposed rhythm is around four focused days a week,
+            with approximately five structured hours a day.
+            The rest of the time is yours.
+          </p>
+        </div>
+
+        <div class="schedule reveal">
+
+          <div class="schedule-row">
+            <div class="schedule-time">Morning</div>
+            <div>
+              <h3>Start slowly. Connect.</h3>
+              <p>Breakfast, coffee, conversations and time to settle into the day.</p>
+            </div>
+          </div>
+
+          <div class="schedule-row">
+            <div class="schedule-time">10 AM</div>
+            <div>
+              <h3>Learn and explore.</h3>
+              <p>Workshops, shared knowledge, new tools and practical sessions.</p>
+            </div>
+          </div>
+
+          <div class="schedule-row">
+            <div class="schedule-time">Afternoon</div>
+            <div>
+              <h3>Focused creation.</h3>
+              <p>Work on personal projects, experiment and exchange feedback.</p>
+            </div>
+          </div>
+
+          <div class="schedule-row">
+            <div class="schedule-time">After hours</div>
+            <div>
+              <h3>Your time. Completely.</h3>
+              <p>Explore, relax, go out, read, swim or do absolutely nothing.</p>
+            </div>
+          </div>
+
+          <div class="schedule-row">
+            <div class="schedule-time">Free days</div>
+            <div>
+              <h3>Enjoy the experience.</h3>
+              <p>No scheduled residency activities. Travel, adventure or recharge.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="how" id="how">
+      <div class="container">
+
+        <div class="how-heading reveal">
+          <div class="eyebrow">The practical side</div>
+
+          <h2>How might it work?</h2>
+
+          <p class="section-intro">
+            The details are still being shaped, but this is the
+            direction we're exploring for the first residency.
+          </p>
+        </div>
+
+        <div class="how-grid">
+
+          <article class="how-item reveal">
+            <span>01 / DESTINATION</span>
+            <h3>Somewhere beautiful.</h3>
+            <p>
+              A carefully selected destination offering an excellent
+              balance of affordability, accommodation quality,
+              amenities, connectivity and lifestyle.
+            </p>
+          </article>
+
+          <article class="how-item reveal">
+            <span>02 / COMMUNITY</span>
+            <h3>A small group.</h3>
+            <p>
+              An initial group of around four to six participants,
+              sharing accommodation and creating a welcoming
+              international community.
+            </p>
+          </article>
+
+          <article class="how-item reveal">
+            <span>03 / CONTRIBUTION</span>
+            <h3>Shared living costs.</h3>
+            <p>
+              Participants would contribute towards accommodation,
+              food and agreed shared expenses. The final amount
+              and inclusions are yet to be determined.
+            </p>
+          </article>
+
+          <article class="how-item reveal">
+            <span>04 / DURATION</span>
+            <h3>Flexible beginnings.</h3>
+            <p>
+              The length of the first residency is still being
+              explored. The intention is to find a duration that
+              works for the group.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="people">
+      <div class="container people-grid">
+
+        <div class="people-photo reveal">
+          <img
+            src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1100&q=85"
+            alt="Friends enjoying time together outdoors"
+            loading="lazy">
+        </div>
+
+        <div class="people-copy reveal">
+          <div class="eyebrow">The people make the place</div>
+
+          <h2>Curious minds. Open hearts. Different perspectives.</h2>
+
+          <p>
+            You don't need to be a developer, designer, entrepreneur
+            or AI expert to be part of this idea.
+          </p>
+
+          <p>
+            You might be someone who loves learning new things.
+            Someone who has an idea but needs the space and motivation
+            to explore it. Someone who enjoys sharing knowledge.
+            Or simply someone who wants to experience a different
+            way of living with interesting people.
+          </p>
+
+          <p>
+            What matters most is curiosity, openness, respect and
+            a willingness to contribute positively to a shared home.
+          </p>
+
+          <div class="people-qualities">
+            <span class="quality">Curious</span>
+            <span class="quality">Open-minded</span>
+            <span class="quality">Creative</span>
+            <span class="quality">Respectful</span>
+            <span class="quality">Independent</span>
+            <span class="quality">Collaborative</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="chapter" id="chapter">
+      <div class="container reveal">
+
+        <div class="eyebrow">The first chapter</div>
+
+        <h2>This is an idea. Let's see what we can make of it.</h2>
+
+        <p>
+          The first Digital Creation Residency is still taking shape.
+          The destination, dates, duration and contribution will be
+          decided as the concept develops. Right now, the most
+          important thing is finding people who connect with the idea.
+        </p>
+
+        <a class="btn" href="#faq">A few things to know ↓</a>
+
+        <span class="chapter-note">
+          No applications. No commitments. Just an idea worth exploring.
+        </span>
+
+      </div>
+    </section>
+
+    <section class="faq" id="faq">
+      <div class="container faq-layout">
+
+        <div class="faq-heading reveal">
+          <div class="eyebrow">A few things you might be wondering</div>
+
+          <h2>Good questions.</h2>
+
+          <p>
+            This is an early concept, so some details are deliberately
+            open. Here's what we know so far.
+          </p>
+        </div>
+
+        <div class="faq-list reveal">
+
+          <details>
+            <summary>Where will the residency take place?</summary>
+            <p>
+              The destination hasn't been decided yet. We're open
+              to exploring different countries and locations.
+              The priority is finding somewhere that offers an
+              excellent balance of affordability, comfortable
+              accommodation, lifestyle, reliable internet,
+              safety and accessibility.
+            </p>
+          </details>
+
+          <details>
+            <summary>What do you mean by premium but economical?</summary>
+            <p>
+              The idea is to enjoy a high quality of life without
+              spending unnecessarily. We want a beautiful,
+              comfortable place with good amenities and an
+              enjoyable environment, while choosing a destination
+              where accommodation and everyday expenses remain
+              affordable.
+            </p>
+          </details>
+
+          <details>
+            <summary>How long will it last?</summary>
+            <p>
+              That's still open. We're exploring different durations
+              and would like to understand what works for people
+              who are genuinely interested.
+            </p>
+          </details>
+
+          <details>
+            <summary>Do I need technical or AI experience?</summary>
+            <p>
+              Not at all. People will arrive with different skills
+              and experience levels. Curiosity and a willingness
+              to learn are more important than knowing everything
+              already.
+            </p>
+          </details>
+
+          <details>
+            <summary>Will we all work on the same project?</summary>
+            <p>
+              Not necessarily. The idea is to give everyone space
+              to develop their own digital products, while creating
+              opportunities for collaboration where interests align.
+              Any shared project will have its ownership arrangements
+              agreed in advance.
+            </p>
+          </details>
+
+          <details>
+            <summary>Is there a fixed daily schedule?</summary>
+            <p>
+              The current proposal is approximately 20 structured
+              hours per week, spread across four days.
+              Activities would take place within agreed hours.
+              Outside those hours, everyone is free to use their
+              time as they wish.
+            </p>
+          </details>
+
+          <details>
+            <summary>What would the contribution cover?</summary>
+            <p>
+              The intention is to share accommodation, food and
+              agreed household expenses. The final contribution
+              and its inclusions haven't been set yet.
+              Transparency around costs will be important.
+            </p>
+          </details>
+
+          <details>
+            <summary>Will I need to bring anything?</summary>
+            <p>
+              A personal laptop will likely be essential if you
+              want to take part in the digital learning and
+              creation activities. Other practical details will
+              be shared once the first residency is planned.
+            </p>
+          </details>
+
+          <details>
+            <summary>Is this a business or a startup incubator?</summary>
+            <p>
+              No. The central idea is a shared living, learning
+              and creation experience. The focus is on personal
+              growth, practical skills, independent digital projects
+              and community rather than operating a commercial
+              production business.
+            </p>
+          </details>
+
+          <details>
+            <summary>Is everything already decided?</summary>
+            <p>
+              Definitely not. This is an exploratory first chapter.
+              The idea is to gather honest feedback, understand
+              people's interests and shape the experience before
+              making final decisions.
+            </p>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+
+      <div class="footer-top">
+        <div class="footer-brand">
+          Digital Creation Residency
+          <span>Live · Learn · Create</span>
+        </div>
+
+        <div class="footer-line">
+          A shared experience, taking shape somewhere beautiful.
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>
+          © <span id="year"></span> Digital Creation Residency
+        </span>
+
+        <span>
+          An idea built around people, possibility and shared experiences.
+        </span>
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    // Automatically update the copyright year.
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    // Reveal sections as they enter the viewport.
+    const revealItems = document.querySelectorAll(".reveal");
+
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.12
+      });
+
+      revealItems.forEach(item => observer.observe(item));
+    } else {
+      revealItems.forEach(item => item.classList.add("visible"));
+    }
+  </script>
+
+</body>
+</html>
