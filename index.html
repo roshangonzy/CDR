@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#f5f2eb">
-  <meta name="description" content="Digital Creation Residency — a shared living, learning and creative experience in beautiful, carefully selected destinations. Live together. Learn together. Create something of your own.">
+  <meta name="description" content="Digital Creation Residency — live, learn and create in beautiful destinations across Southeast Asia. A shared living and learning experience for curious, creative people.">
   <title>Digital Creation Residency | Live. Learn. Create.</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -373,7 +373,7 @@
       margin-right: 12px;
     }
 
-    /* Destination */
+    /* Destinations */
 
     .destination {
       background: #eae9df;
@@ -404,6 +404,21 @@
 
     .destination-image img {
       height: 100%;
+    }
+
+    .destination-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 26px;
+    }
+
+    .destination-tag {
+      background: rgba(255,255,255,.7);
+      padding: 10px 15px;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 600;
     }
 
     .destination-principles {
@@ -525,7 +540,66 @@
       max-width: 440px;
     }
 
-    /* Day in the life */
+    /* Shared projects */
+
+    .projects {
+      padding: 105px 0;
+      background: var(--paper);
+    }
+
+    .projects-heading {
+      max-width: 760px;
+      margin-bottom: 50px;
+    }
+
+    .projects-heading h2 {
+      margin: 16px 0 20px;
+    }
+
+    .projects-heading p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .project-card {
+      padding: 40px;
+      background: var(--cream);
+      border-top: 3px solid var(--green);
+    }
+
+    .project-card .project-label {
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: var(--orange);
+      font-weight: 700;
+    }
+
+    .project-card h3 {
+      font-family: var(--serif);
+      font-size: 29px;
+      margin: 14px 0;
+    }
+
+    .project-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .project-note {
+      margin-top: 30px;
+      padding: 22px 25px;
+      background: var(--green-light);
+      color: var(--green);
+      font-size: 13px;
+    }
+
+    /* Residency rhythm */
 
     .day {
       padding: 110px 0;
@@ -553,9 +627,9 @@
 
     .schedule-row {
       display: grid;
-      grid-template-columns: 105px 1fr;
+      grid-template-columns: 115px 1fr;
       gap: 20px;
-      padding: 21px 0;
+      padding: 23px 0;
       border-bottom: 1px solid rgba(36,44,37,.2);
     }
 
@@ -922,13 +996,15 @@
       .how,
       .people,
       .faq,
-      .destination {
+      .destination,
+      .projects {
         padding: 80px 0;
       }
 
       .pillar-grid,
       .creation-grid,
-      .how-grid {
+      .how-grid,
+      .projects-grid {
         grid-template-columns: 1fr;
       }
 
@@ -936,7 +1012,8 @@
         height: 270px;
       }
 
-      .creation-card {
+      .creation-card,
+      .project-card {
         padding: 30px;
         min-height: auto;
       }
@@ -951,7 +1028,7 @@
       }
 
       .schedule-row {
-        grid-template-columns: 80px 1fr;
+        grid-template-columns: 90px 1fr;
         gap: 12px;
       }
 
@@ -989,6 +1066,8 @@
 
 <body>
 
+  <!-- Navigation -->
+
   <nav>
     <div class="container nav-inner">
       <a class="brand" href="#home">
@@ -997,32 +1076,34 @@
       </a>
 
       <div class="nav-links">
-        <a href="#idea">The idea</a>
+        <a href="#idea">The residency</a>
         <a href="#experience">Experience</a>
         <a href="#learning">Learning</a>
         <a href="#how">How it works</a>
         <a href="#faq">FAQ</a>
-        <a href="#chapter" class="nav-cta">Explore the idea ↗</a>
+        <a href="#chapter" class="nav-cta">Explore ↗</a>
       </div>
     </div>
   </nav>
 
+  <!-- Hero -->
+
   <header class="hero" id="home">
     <div class="container">
       <div class="hero-content">
-        <div class="eyebrow">An idea taking shape · Somewhere beautiful</div>
+        <div class="eyebrow">A shared living & learning experience</div>
 
         <h1>Live.<br>Learn.<br><em>Create.</em></h1>
 
         <p class="hero-copy">
-          Imagine sharing a beautiful home with curious people from around
-          the world. Learning new things, exploring ideas, building digital
-          creations and making the most of life along the way.
+          A beautiful place to live. Interesting people to share it with.
+          New skills to discover. Digital creations to bring to life.
+          Welcome to the Digital Creation Residency.
         </p>
 
         <div class="hero-bottom">
-          <a href="#idea" class="btn">Discover the idea ↓</a>
-          <span class="hero-note">A shared living & learning experience</span>
+          <a href="#idea" class="btn">Discover the residency ↓</a>
+          <span class="hero-note">A new way to live, learn and create together.</span>
         </div>
       </div>
     </div>
@@ -1030,25 +1111,31 @@
 
   <main>
 
+    <!-- Introduction -->
+
     <section class="intro" id="idea">
       <div class="container reveal">
-        <div class="eyebrow">A different way to spend time together</div>
+        <div class="eyebrow">Welcome to the residency</div>
 
-        <h2>What if the place you live became the place where you <em>grow?</em></h2>
+        <h2>Where the place you live becomes the place where you <em>grow.</em></h2>
 
         <p class="section-intro">
-          The Digital Creation Residency is an idea for bringing together
-          a small group of internationally minded people to live, learn
-          and create in a beautiful destination.
-          A home away from home, a space for exchanging knowledge,
-          and an opportunity to explore what we're capable of creating.
+          The Digital Creation Residency brings together a small group
+          of internationally minded people to live, learn and create
+          in beautiful destinations around the world.
+
+          It combines the enjoyment of shared living, practical learning,
+          personal creativity and the energy of a community that grows
+          together.
         </p>
 
         <div class="intro-signature">
-          Good people. New perspectives. Ideas worth exploring.
+          Good people. New perspectives. Ideas brought to life.
         </div>
       </div>
     </section>
+
+    <!-- Three pillars -->
 
     <section class="pillars" id="experience">
       <div class="container">
@@ -1060,9 +1147,9 @@
           </div>
 
           <p class="section-intro">
-            This isn't just a place to work, a course to attend or a holiday
-            to take. The idea is to bring all three together, without
-            sacrificing any of them.
+            Lifestyle, learning and creation are equally important.
+            The residency brings them together to create an experience
+            that is enriching, enjoyable and genuinely useful.
           </p>
         </div>
 
@@ -1096,9 +1183,9 @@
             <div class="pillar-number">02 / LEARNING</div>
             <h3>Learn together.</h3>
             <p>
-              Exchange skills, explore emerging technologies, attend
-              practical workshops and learn from the different experiences
-              everyone brings to the table.
+              Explore emerging technologies, attend practical
+              founder-led sessions, exchange skills and learn from
+              the different experiences everyone brings.
             </p>
           </article>
 
@@ -1113,15 +1200,17 @@
             <div class="pillar-number">03 / CREATION</div>
             <h3>Create something.</h3>
             <p>
-              Turn ideas into digital products. Experiment, build,
-              collaborate and make progress on something you can
-              continue developing long after the residency.
+              Turn ideas into digital products. Develop individual
+              projects, collaborate on shared creations and make
+              progress on something meaningful.
             </p>
           </article>
 
         </div>
       </div>
     </section>
+
+    <!-- Lifestyle -->
 
     <section class="lifestyle">
       <div class="container lifestyle-grid">
@@ -1149,15 +1238,14 @@
           </p>
 
           <p>
-            Some days might mean exploring the local area. Others might
-            mean a long breakfast, a productive morning and an evening
-            sharing stories over dinner.
+            Enjoy long breakfasts, productive days, local adventures
+            and evenings sharing stories over dinner.
           </p>
 
           <p>
-            The idea is to create a welcoming home where people feel
-            comfortable being themselves. There is room for connection
-            without the pressure to be together all the time.
+            The residency is designed to feel like a welcoming home.
+            There is room for connection without the pressure to be
+            together all the time.
           </p>
 
           <ul class="lifestyle-list">
@@ -1172,18 +1260,26 @@
       </div>
     </section>
 
+    <!-- Destinations -->
+
     <section class="destination" id="destination">
       <div class="container destination-grid">
 
         <div class="destination-copy reveal">
-          <div class="eyebrow">The destination</div>
+          <div class="eyebrow">The destinations</div>
 
           <h2>Premium living. Sensible spending.</h2>
 
           <p>
-            Why limit ourselves to one country? The idea is to find
-            destinations where our money goes further without
-            compromising on the quality of the experience.
+            The residency takes place in carefully selected destinations
+            where our money goes further without compromising on
+            the quality of the experience.
+          </p>
+
+          <p>
+            We're looking at countries such as Vietnam, Thailand
+            and Indonesia, along with other destinations that offer
+            the right combination of affordability, comfort and lifestyle.
           </p>
 
           <p>
@@ -1192,14 +1288,15 @@
             to explore — all at a cost that makes sense for everyone.
           </p>
 
-          <p>
-            The destination hasn't been decided yet. We'll explore
-            different possibilities and choose a place that offers
-            the right balance of affordability, comfort, lifestyle
-            and accessibility.
-          </p>
+          <div class="destination-tags">
+            <span class="destination-tag">Vietnam</span>
+            <span class="destination-tag">Thailand</span>
+            <span class="destination-tag">Indonesia</span>
+            <span class="destination-tag">And beyond</span>
+          </div>
 
           <div class="destination-principles">
+
             <div class="destination-principle">
               <strong>01 / Value</strong>
               Affordable overall cost of living.
@@ -1229,6 +1326,7 @@
               <strong>06 / Safety</strong>
               A comfortable environment for everyone.
             </div>
+
           </div>
         </div>
 
@@ -1242,6 +1340,8 @@
       </div>
     </section>
 
+    <!-- Learning -->
+
     <section class="learning" id="learning">
       <div class="container learning-grid">
 
@@ -1251,15 +1351,16 @@
           <h2>Everyone knows something. Everyone has something to learn.</h2>
 
           <p class="learning-copy">
-            Learning doesn't have to happen in a traditional classroom.
-            We can learn from each other, run practical sessions,
-            experiment with new tools and explore ideas together.
+            The learning programme is led by the founder and built
+            around practical, hands-on exploration. Sessions introduce
+            useful concepts, tools and techniques that participants
+            can apply to their own interests and projects.
           </p>
 
           <p class="learning-copy">
-            Some sessions may be led by the residency founder.
-            Others may be shared by participants who have skills or
-            experiences they want to pass on.
+            Participants also bring their own knowledge and experience.
+            Sharing skills, explaining discoveries and learning from
+            one another are all part of the experience.
           </p>
 
           <div class="topic-list">
@@ -1284,6 +1385,8 @@
       </div>
     </section>
 
+    <!-- Creation -->
+
     <section class="creation">
       <div class="container">
 
@@ -1294,9 +1397,9 @@
 
           <p class="section-intro">
             The creative side is about exploring possibilities and
-            turning ideas into useful digital things. Not necessarily
-            building the next big company. Just making something
-            meaningful that belongs to you.
+            turning ideas into useful digital products. The focus
+            is on learning by doing, experimenting and making
+            something meaningful.
           </p>
         </div>
 
@@ -1308,17 +1411,20 @@
             <p>
               Develop a digital product, build a useful tool, create
               a resource, experiment with an AI-powered idea or work
-              towards a project you've been putting off.
+              towards a project you've been putting off. Participants
+              have the freedom to pursue projects that reflect their
+              own interests and ambitions.
             </p>
           </article>
 
           <article class="creation-card reveal">
             <div class="symbol">↗</div>
-            <h3>Collaboration without pressure.</h3>
+            <h3>Build something together.</h3>
             <p>
-              Exchange feedback, share expertise and collaborate when
-              interests align. Some projects may be individual;
-              others may be shared by people who choose to work together.
+              Work with other participants on shared projects.
+              Bring different skills and perspectives together,
+              solve problems collaboratively and experience
+              the process of creating as a group.
             </p>
           </article>
 
@@ -1336,9 +1442,9 @@
             <div class="symbol">⌁</div>
             <h3>Keep building after you leave.</h3>
             <p>
-              The goal is to leave with new skills, useful connections
-              and something tangible you can continue developing
-              independently, wherever life takes you.
+              Leave with new skills, useful connections and tangible
+              progress on your projects. Continue developing your
+              creations independently, wherever life takes you.
             </p>
           </article>
 
@@ -1346,60 +1452,138 @@
       </div>
     </section>
 
+    <!-- Individual and group projects -->
+
+    <section class="projects">
+      <div class="container">
+
+        <div class="projects-heading reveal">
+          <div class="eyebrow">The creation philosophy</div>
+
+          <h2>Individual ambition. Collective energy.</h2>
+
+          <p>
+            The residency makes space for both personal creativity
+            and shared achievement. Participants can focus on
+            something of their own while also contributing to
+            projects that bring the group together.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+
+          <article class="project-card reveal">
+            <div class="project-label">YOUR PERSONAL JOURNEY</div>
+
+            <h3>Individual projects</h3>
+
+            <p>
+              Every participant has the opportunity to develop
+              their own digital product or project. It could be
+              an AI-powered tool, a digital resource, a website,
+              a template, an online course or something entirely
+              different. You decide what you want to create and
+              take ownership of your work.
+            </p>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-label">OUR SHARED JOURNEY</div>
+
+            <h3>Group projects</h3>
+
+            <p>
+              The group also works together on selected projects
+              that encourage collaboration and shared learning.
+              Participants contribute their different strengths,
+              learn from one another and experience what can be
+              achieved as a team.
+            </p>
+          </article>
+
+        </div>
+
+        <div class="project-note reveal">
+          <strong>Ownership matters.</strong>
+          Individual creations belong to the people who develop them.
+          Ownership and responsibilities for shared projects are
+          discussed and agreed upon before work begins.
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Residency rhythm -->
+
     <section class="day">
       <div class="container day-layout">
 
         <div class="day-heading reveal">
-          <div class="eyebrow">A glimpse into the rhythm</div>
+          <div class="eyebrow">The residency rhythm</div>
 
           <h2>Structure when we need it. Freedom when we don't.</h2>
 
           <p>
-            The proposed rhythm is around four focused days a week,
-            with approximately five structured hours a day.
-            The rest of the time is yours.
+            The residency combines structured learning and focused
+            creation with plenty of room to enjoy the destination
+            and spend time independently.
           </p>
         </div>
 
         <div class="schedule reveal">
 
           <div class="schedule-row">
-            <div class="schedule-time">Morning</div>
+            <div class="schedule-time">Connect</div>
             <div>
-              <h3>Start slowly. Connect.</h3>
-              <p>Breakfast, coffee, conversations and time to settle into the day.</p>
+              <h3>Share the experience.</h3>
+              <p>
+                Enjoy meals, conversations, new friendships
+                and the everyday experience of living together.
+              </p>
             </div>
           </div>
 
           <div class="schedule-row">
-            <div class="schedule-time">10 AM</div>
+            <div class="schedule-time">Learn</div>
             <div>
-              <h3>Learn and explore.</h3>
-              <p>Workshops, shared knowledge, new tools and practical sessions.</p>
+              <h3>Explore new possibilities.</h3>
+              <p>
+                Take part in founder-led workshops, practical sessions
+                and knowledge-sharing activities.
+              </p>
             </div>
           </div>
 
           <div class="schedule-row">
-            <div class="schedule-time">Afternoon</div>
+            <div class="schedule-time">Create</div>
             <div>
-              <h3>Focused creation.</h3>
-              <p>Work on personal projects, experiment and exchange feedback.</p>
+              <h3>Make progress on your projects.</h3>
+              <p>
+                Work independently, collaborate with others,
+                experiment and put new skills into practice.
+              </p>
             </div>
           </div>
 
           <div class="schedule-row">
-            <div class="schedule-time">After hours</div>
+            <div class="schedule-time">Explore</div>
             <div>
-              <h3>Your time. Completely.</h3>
-              <p>Explore, relax, go out, read, swim or do absolutely nothing.</p>
+              <h3>Enjoy the destination.</h3>
+              <p>
+                Discover local places, experience the culture,
+                spend time outdoors and make memories together.
+              </p>
             </div>
           </div>
 
           <div class="schedule-row">
-            <div class="schedule-time">Free days</div>
+            <div class="schedule-time">Recharge</div>
             <div>
-              <h3>Enjoy the experience.</h3>
-              <p>No scheduled residency activities. Travel, adventure or recharge.</p>
+              <h3>Your time is your own.</h3>
+              <p>
+                Outside agreed residency activities, everyone
+                is free to follow their own plans and routines.
+              </p>
             </div>
           </div>
 
@@ -1407,17 +1591,20 @@
       </div>
     </section>
 
+    <!-- How it works -->
+
     <section class="how" id="how">
       <div class="container">
 
         <div class="how-heading reveal">
           <div class="eyebrow">The practical side</div>
 
-          <h2>How might it work?</h2>
+          <h2>How the residency works.</h2>
 
           <p class="section-intro">
-            The details are still being shaped, but this is the
-            direction we're exploring for the first residency.
+            A small international group shares a comfortable home
+            and participates in a structured learning and creation
+            experience. The first cohort is currently being organised.
           </p>
         </div>
 
@@ -1427,9 +1614,9 @@
             <span>01 / DESTINATION</span>
             <h3>Somewhere beautiful.</h3>
             <p>
-              A carefully selected destination offering an excellent
-              balance of affordability, accommodation quality,
-              amenities, connectivity and lifestyle.
+              Carefully selected destinations such as Vietnam,
+              Thailand and Indonesia, chosen for their value,
+              accommodation quality, connectivity and lifestyle.
             </p>
           </article>
 
@@ -1447,25 +1634,27 @@
             <span>03 / CONTRIBUTION</span>
             <h3>Shared living costs.</h3>
             <p>
-              Participants would contribute towards accommodation,
+              Participants contribute towards accommodation,
               food and agreed shared expenses. The final amount
-              and inclusions are yet to be determined.
+              and inclusions are communicated before confirmation.
             </p>
           </article>
 
           <article class="how-item reveal">
             <span>04 / DURATION</span>
-            <h3>Flexible beginnings.</h3>
+            <h3>A meaningful stay.</h3>
             <p>
-              The length of the first residency is still being
-              explored. The intention is to find a duration that
-              works for the group.
+              The first residency duration is being finalised
+              based on participant availability and the
+              practical requirements of the programme.
             </p>
           </article>
 
         </div>
       </div>
     </section>
+
+    <!-- People -->
 
     <section class="people">
       <div class="container people-grid">
@@ -1484,7 +1673,7 @@
 
           <p>
             You don't need to be a developer, designer, entrepreneur
-            or AI expert to be part of this idea.
+            or AI expert to be part of the residency.
           </p>
 
           <p>
@@ -1513,28 +1702,32 @@
       </div>
     </section>
 
+    <!-- First cohort -->
+
     <section class="chapter" id="chapter">
       <div class="container reveal">
 
-        <div class="eyebrow">The first chapter</div>
+        <div class="eyebrow">The first residency</div>
 
-        <h2>This is an idea. Let's see what we can make of it.</h2>
+        <h2>A new place. New people. A whole lot of possibilities.</h2>
 
         <p>
-          The first Digital Creation Residency is still taking shape.
-          The destination, dates, duration and contribution will be
-          decided as the concept develops. Right now, the most
-          important thing is finding people who connect with the idea.
+          The Digital Creation Residency is preparing for its first
+          cohort. We're connecting with people who share the enthusiasm
+          for this kind of experience and bringing the practical
+          arrangements together.
         </p>
 
-        <a class="btn" href="#faq">A few things to know ↓</a>
+        <a class="btn" href="#faq">Explore the details ↓</a>
 
         <span class="chapter-note">
-          No applications. No commitments. Just an idea worth exploring.
+          Be part of the beginning. Help shape an experience worth sharing.
         </span>
 
       </div>
     </section>
+
+    <!-- FAQ -->
 
     <section class="faq" id="faq">
       <div class="container faq-layout">
@@ -1545,8 +1738,8 @@
           <h2>Good questions.</h2>
 
           <p>
-            This is an early concept, so some details are deliberately
-            open. Here's what we know so far.
+            Here's a little more about the residency,
+            how it works and what to expect.
           </p>
         </div>
 
@@ -1555,106 +1748,116 @@
           <details>
             <summary>Where will the residency take place?</summary>
             <p>
-              The destination hasn't been decided yet. We're open
-              to exploring different countries and locations.
-              The priority is finding somewhere that offers an
-              excellent balance of affordability, comfortable
-              accommodation, lifestyle, reliable internet,
-              safety and accessibility.
+              We're exploring destinations across Southeast Asia,
+              including Vietnam, Thailand and Indonesia, as well
+              as other suitable countries. The final destination
+              will be selected based on accommodation quality,
+              affordability, lifestyle, safety and connectivity.
             </p>
           </details>
 
           <details>
             <summary>What do you mean by premium but economical?</summary>
             <p>
-              The idea is to enjoy a high quality of life without
+              The goal is to enjoy a high quality of life without
               spending unnecessarily. We want a beautiful,
-              comfortable place with good amenities and an
-              enjoyable environment, while choosing a destination
-              where accommodation and everyday expenses remain
-              affordable.
+              comfortable home with good amenities and an enjoyable
+              environment, while choosing a destination where
+              accommodation and everyday expenses remain affordable.
             </p>
           </details>
 
           <details>
-            <summary>How long will it last?</summary>
+            <summary>How long will the residency last?</summary>
             <p>
-              That's still open. We're exploring different durations
-              and would like to understand what works for people
-              who are genuinely interested.
+              The duration of the first residency is being finalised.
+              It will be based on the needs of the programme,
+              participant availability and the practical arrangements.
             </p>
           </details>
 
           <details>
             <summary>Do I need technical or AI experience?</summary>
             <p>
-              Not at all. People will arrive with different skills
-              and experience levels. Curiosity and a willingness
-              to learn are more important than knowing everything
-              already.
+              No. Participants arrive with different skills and
+              experience levels. Curiosity and a willingness to
+              learn are more important than knowing everything already.
+              The programme is designed to encourage learning
+              through practical exploration.
+            </p>
+          </details>
+
+          <details>
+            <summary>Who leads the learning programme?</summary>
+            <p>
+              The founder leads the learning programme and
+              facilitates practical workshops, sessions and
+              project activities. Participants also share their
+              own skills and knowledge, creating opportunities
+              for everyone to learn from one another.
             </p>
           </details>
 
           <details>
             <summary>Will we all work on the same project?</summary>
             <p>
-              Not necessarily. The idea is to give everyone space
-              to develop their own digital products, while creating
-              opportunities for collaboration where interests align.
-              Any shared project will have its ownership arrangements
-              agreed in advance.
+              The residency includes both individual and group
+              projects. Participants develop their own digital
+              products based on their interests, while also
+              collaborating on selected shared projects.
+            </p>
+          </details>
+
+          <details>
+            <summary>Who owns the digital products we create?</summary>
+            <p>
+              Individual projects belong to the participants
+              who create them. Ownership and responsibilities
+              for group projects are discussed and agreed upon
+              before the project begins.
             </p>
           </details>
 
           <details>
             <summary>Is there a fixed daily schedule?</summary>
             <p>
-              The current proposal is approximately 20 structured
-              hours per week, spread across four days.
-              Activities would take place within agreed hours.
-              Outside those hours, everyone is free to use their
-              time as they wish.
+              The residency follows a structured programme
+              of learning and creation activities. The exact
+              schedule is organised around the programme.
+              Activities take place within agreed hours,
+              leaving participants free to enjoy their own
+              time outside those activities.
             </p>
           </details>
 
           <details>
             <summary>What would the contribution cover?</summary>
             <p>
-              The intention is to share accommodation, food and
-              agreed household expenses. The final contribution
-              and its inclusions haven't been set yet.
-              Transparency around costs will be important.
+              The contribution covers agreed shared living
+              expenses such as accommodation, food and household
+              costs. The final amount and inclusions are shared
+              transparently before participants confirm their stay.
             </p>
           </details>
 
           <details>
             <summary>Will I need to bring anything?</summary>
             <p>
-              A personal laptop will likely be essential if you
-              want to take part in the digital learning and
-              creation activities. Other practical details will
-              be shared once the first residency is planned.
+              A personal laptop is essential for taking part
+              in the digital learning and creation activities.
+              Other practical details will be shared ahead
+              of the residency.
             </p>
           </details>
 
           <details>
             <summary>Is this a business or a startup incubator?</summary>
             <p>
-              No. The central idea is a shared living, learning
-              and creation experience. The focus is on personal
-              growth, practical skills, independent digital projects
-              and community rather than operating a commercial
-              production business.
-            </p>
-          </details>
-
-          <details>
-            <summary>Is everything already decided?</summary>
-            <p>
-              Definitely not. This is an exploratory first chapter.
-              The idea is to gather honest feedback, understand
-              people's interests and shape the experience before
-              making final decisions.
+              No. The central purpose is a shared living,
+              learning and creation experience. The focus is
+              on personal growth, practical skills, independent
+              digital projects and community rather than
+              operating a commercial production business.
             </p>
           </details>
 
@@ -1663,6 +1866,8 @@
     </section>
 
   </main>
+
+  <!-- Footer -->
 
   <footer>
     <div class="container">
@@ -1674,7 +1879,7 @@
         </div>
 
         <div class="footer-line">
-          A shared experience, taking shape somewhere beautiful.
+          A shared experience. Beautiful destinations. Endless possibilities.
         </div>
       </div>
 
@@ -1684,7 +1889,7 @@
         </span>
 
         <span>
-          An idea built around people, possibility and shared experiences.
+          Built around people, possibility and shared experiences.
         </span>
       </div>
 
